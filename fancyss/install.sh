@@ -706,7 +706,7 @@ install_now(){
 	if [ -f "/koolshare/res/layer/layer.js" -a "${_LAYJS_MD5}" == "9d72838d6f33e45f058cc1fa00b7a5c7" ];then
 		mv -f /tmp/shadowsocks/res/layer.js /koolshare/res/layer/
 	else
-		rm tmp/shadowsocks/res/layer.js
+		rm /tmp/shadowsocks/res/layer.js >/dev/null 2>&1
 	fi
 	cp -rf /tmp/shadowsocks/res/* /koolshare/res/
 	sync
