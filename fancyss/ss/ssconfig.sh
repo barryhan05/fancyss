@@ -5474,9 +5474,9 @@ get_status() {
 }
 
 start_ws(){
-	if [ -x "/koolshare/bin/websocketd" -a -f "/koolshare/ss/websocket.sh" ];then
+	if [ -x "/koolshare/bin/websocketd" -a -f "/koolshare/ss/websocket" ];then
 		if [ -z "$(pidof websocketd)" ];then
-			run_bg websocketd --port=803 /bin/sh /koolshare/ss/websocket.sh
+			run_bg websocketd --port=803 /koolshare/ss/websocket
 		fi
 	fi
 }
